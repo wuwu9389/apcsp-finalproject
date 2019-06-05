@@ -41,6 +41,8 @@ int main()
       int age;
       int sID;
       int gradePercent;
+      int totalscore;
+      int scoreearned;
       printf("Enter First Name of Student:  ");
       fgets(input, 100, stdin);
       sscanf(input, "%s", firstname);
@@ -50,14 +52,17 @@ int main()
       printf("Enter Student ID of Student: ");
       fgets(input, 100, stdin);
       sscanf(input, "%d", &sID);
-      printf("Enter Grade Percent of Student:  ");
+      printf("Enter Total Score of Assignment:  ");
       fgets(input, 100, stdin);
-      sscanf(input, "%d", &gradePercent);
+      sscanf(input, "%d", &totalscore);
+      printf("Enter Score Earned by Student:  ");
+      fgets(input, 100, stdin);
+      sscanf(input, "%d", &scoreearned);
       printf("\n");
       strcpy(students[count].firstname, firstname);
       strcpy(students[count].lastname, lastname);
       students[count].sid = sID;
-      students[count].gradePercent = gradePercent;
+      students[count].gradePercent = scoreerned / (float)scoretotal;
       count++;
     }
     else
